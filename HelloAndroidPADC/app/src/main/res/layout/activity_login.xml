@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.padcmyanmar.helloandroidpadc.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Login" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_login_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_email_or_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="48dp"
+            android:textColorHint="@color/colorPrimary"
+            >
+            <EditText
+                android:id="@+id/et_email_or_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_email_or_phone"
+                android:maxLines="1"
+
+                 />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_email_or_phone"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="16dp"
+            >
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_visibility_black_24dp"
+                android:hint="@string/lbl_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColorHint="@color/colorPrimary" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_password"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_background_radius"
+            android:text="@string/btn_login"
+            android:textAllCaps="false"
+            android:textColor="@color/White_full"
+            android:foreground="@drawable/ripple_white"
+            />
+
+        <TextView
+            android:id="@+id/btn_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/btn_login"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_forgot_password"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignEnd="@id/btn_login"
+            android:foreground="@drawable/ripple_primary"
+            android:clickable="true"
+            android:padding="8dp"
+            android:focusable="true" />
+
+        <View
+            android:id="@+id/v_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/btn_forget_password"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="32dp"
+            android:background="#AAA"
+
+            />
+
+        <TextView
+            android:id="@+id/btn_new_seller_or_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/btn_forget_password"
+            android:layout_below="@id/v_separator"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_new_seller_register"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignEnd="@id/btn_forget_password"
+            android:foreground="@drawable/ripple_primary"
+            android:clickable="true"
+            android:padding="8dp"
+            android:focusable="true" />
+
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>
