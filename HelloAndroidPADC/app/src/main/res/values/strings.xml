@@ -37,5 +37,6 @@
     <string name="lbl_address">Address</string>
     <string name="cb_at_home">I\'m at my home</string>
     <string name="lbl_gender">Gender</string>
+    <string name="lbl_already_have_account">Already Have Account?</string>
 
 </resources>

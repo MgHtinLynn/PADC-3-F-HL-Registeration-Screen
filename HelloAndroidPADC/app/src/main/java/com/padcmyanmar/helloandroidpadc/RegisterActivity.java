@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     private RadioGroup radioSex;
     private EditText etAddress;
     private CheckBox cbAddress;
+    private TextView btnLogin;
 
     public static Intent newIntent(Context context) {
         Intent Intent = new Intent(context, RegisterActivity.class);
@@ -35,8 +37,17 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        btnLogin = findViewById(R.id.tv_already_account);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                Intent intent = LoginActivity.newIntent(getApplicationContext());
+                startActivity(intent);
+            }
+        });
         addListenerOnButton();
+
 
 
     }
